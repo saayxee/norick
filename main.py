@@ -2,7 +2,7 @@ import requests
 from termcolor import colored
 
 # Example ASCII Art Logo
-ascii_logo = f'''
+ascii_logo = colored(f'''
   
   
   ███╗   ██╗ ██████╗ ██████╗ ██╗ ██████╗██╗  ██╗
@@ -12,47 +12,48 @@ ascii_logo = f'''
   ██║ ╚████║╚██████╔╝██║  ██║██║╚██████╗██║  ██╗
   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝
           {colored("", "white")}     
+          
   Never gonna give my streak up.          
-  {colored("https://github.com/saayxee/norick", "grey")} 
-
-'''
-
-
-def verify_rickroll(url):
-    try:
-        # Send an HTTP request to fetch the page content
-        response = requests.get(url)
-        
-        # Check if the request was successful (status code 200)
-        if response.status_code == 200:
-            
-            # Define a list of keywords that identify a rickroll
-            rickroll_keywords = ["Rick Roll", "Rick Astley",  "Never Gonna Give You Up", "Whenever You Need Somebody", 'Rickrolled']
-
-            # Check if any of the keywords appear in the page text
-            for keyword in rickroll_keywords:
-                if keyword.lower() in response.text.lower():
-                    return True  # The page contains a rickroll
-            return False  # No rickroll detected
-        else:
-            return False  # The page was not found or an error occurred
-    except requests.exceptions.RequestException as e:
-        print(colored(f"  - Error: {e}", "red"))
-        return "Maybe"  # Return false if there was an issue fetching the page
+  {colored("https://github.com/saayxee/norick", "light_yellow")} 
+  
+''', "yellow")
 
 # Display the ASCII logo when the script runs
 print(ascii_logo)
 
-# Example usage
+def verify_rickroll(url):
+    try:
+        # send an HTTP request to fetch the YouTube page content
+        response = requests.get(url)
+        
+        # check to see if the request was successful (status code 200)
+        if response.status_code == 200:
+            # list of keywords that identify a rickroll
+            rickroll_keywords = ["Rick Roll", "Rick Astley",  "Never Gonna Give You Up", "Whenever You Need Somebody", 'Rickrolled']
+
+            # check to see if any of the keywords appear in the page text
+            for rickroll_keyword in rickroll_keywords:
+                if rickroll_keyword.lower() in response.text.lower():
+                    return True  # the page contains a rickroll
+            return False  # no rickroll detected
+        else:
+            return False  # the page was not found or an error occurred
+    except requests.exceptions.RequestException as e:
+        print(colored(f"  - Error: {e}", "light_red"))
+        return "Error"  # an error occurred
+
+
 while True: 
-    url = input("  Enter the YouTube link that you want to check (Input `exit` to leave): ")
+    url = input("  Enter a YouTube link (`exit` to stop ): ")
     if (url == "exit"):
         print("\n")
         break
     elif ("youtube" not in url.lower()):
-        print(colored("  - This link is not a YouTube link. Please enter a YouTube link.\n", "red"))
+        print(colored("  - This link is not a YouTube link. Please enter a YouTube link.\n", "light_red"))
         continue
-    if verify_rickroll(url) == "Maybe":
+
+
+    if verify_rickroll(url) == "Error":
         print("")
         continue
     elif verify_rickroll(url) :
