@@ -44,7 +44,7 @@ def verify_rickroll(url):
 
 
 while True: 
-    url = input("  Enter a YouTube link (`exit` to stop ): ")
+    url = input("  Enter a YouTube link (`exit` to stop): ")
     if (url == "exit"):
         print("\n")
         break
