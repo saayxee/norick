@@ -51,6 +51,8 @@ while True:
     elif ("youtube" not in url.lower()):
         print(colored("  - This link is not a YouTube link. Please enter a YouTube link.\n", "light_red"))
         continue
+    elif ("https://" not in url.lower()):
+        url = "https://" + url
 
 
     if verify_rickroll(url) == "Error":
