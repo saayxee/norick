@@ -16,7 +16,7 @@
 git clone https://github.com/saayxee/norick
 ```
 
-**Change Directory**
+**Change directory**
 
 ```bash
 cd norick
@@ -34,7 +34,7 @@ pip install termcolor
 python main.py
 ```
 
-Now you may enter the URL into the input field and verify if the link is a rick roll or not.
+Now you may enter the URL into the input field and verify if the link is a Rickroll or not.
 
 ## Features
 > [!TIP]  
@@ -45,7 +45,7 @@ Now you may enter the URL into the input field and verify if the link is a rick 
 
 
 ## Customization
-You can add more keywords if you want to make the tool more efficient for your specific use case.
+You can add more keywords to make the tool more efficient for your specific use case.
 
 ## Contribution/Bugs
 > If you experience any bugs regarding the tool, open an issue and document the problem in detail so that I can replicate it and fix it accordingly.
