@@ -1,14 +1,14 @@
 # Norick
-![Mockup image of a CLI (zsh/macOS) demonstrating the use of the tool](https://github.com/saayxee/norick/blob/main/assets/CLI.jpg?raw=true)
-> Norick is a lightweight, simple, and user-friendly CLI tool implemented in Python to check whether a given YouTube link is a Rickroll or not. It scrapes the raw HTML content of the page and checks for keywords such as "Rick Roll", "Rickrolled", "Never Gonna Give You Up", etc.
+![Mockup image of a CLI (assumingly macOS/zsh) demonstrating the use of the tool](https://github.com/saayxee/norick/blob/main/assets/CLI.jpg?raw=true)
+> Norick is a lightweight, simple, and user-friendly CLI tool implemented in Python to check whether a given YouTube link is a Rickroll. It scrapes the raw HTML content of the page and checks for keywords such as "Rick Roll", "Rickrolled", "Never Gonna Give You Up", etc.
 
 ## Libraries Used
 - Requests: to scrape the HTML content from the link's page.
-- Termcolor: to provide a more user friendly interface by adding color.
+- Termcolor: to provide a more user-friendly interface by adding color.
 
 ## Setup
 > [!NOTE]  
-> Kindly ensure you have Python 3, pip and git installed on your machine.
+> Ensure you have Python 3, pip, and git installed on your machine.
 
 **Clone the repository**
 
@@ -38,10 +38,10 @@ Now you may enter the URL into the input field and verify if the link is a Rickr
 
 ## Features
 > [!TIP]  
-> You can enter a url without the prefix "https://" and the tool will add it automatically.
+> You can enter a URL without the prefix "https://" and the tool will add it automatically.
 - Enter any YouTube link.
-- User-friendly, color-coded interface and error messages.
-- Rickroll identification through specific keywords found in the page HTML content.
+- User-friendly, color-coded interface and error messages. 
+- Rickroll identification through specific keywords found on the page of the HTML content.
 
 
 ## Customization
@@ -50,7 +50,7 @@ You can add more keywords to make the tool more efficient for your specific use 
 ## Contribution/Bugs
 > If you experience any bugs regarding the tool, open an issue and document the problem in detail so that I can replicate it and fix it accordingly.
 
-If you want to contribute a feature or fix a bug yourself, kindly act in accordance to the following instructions/guide:
+If you want to contribute a feature or fix a bug yourself, kindly act in accordance with the following instructions/guide:
 - Fork the repository.
 - Create a new branch for your changes.
 - Implement your changes.
